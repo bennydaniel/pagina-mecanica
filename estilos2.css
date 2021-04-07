@@ -1,0 +1,122 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body {
+    background: #3a3d47;
+    font-family: verdana;
+}
+.container {
+    max-width: 1200px;
+    background: white;
+    margin: 10px auto;
+}
+.superior {
+    background: #1551a1;
+    overflow: hidden;
+}
+.logo {
+    float: left;
+    width: 300px;
+    padding: 35px;
+}
+/*estilos para el menu de opciones*/
+.menu {
+    float: left;
+    padding: 50px;
+}
+.opciones li{
+    float: left;
+    list-style: none;
+    
+    display: flex;
+    flex-wrap: wrap;
+}
+.opciones li a{
+    color: white;
+    padding: 20px;
+    text-decoration: none;
+    border: 1px solid white;
+}
+.opciones li a:hover{
+    background: #0c3468;
+}
+/*estilos para el cuerpo*/
+.cuerpo{
+    overflow:hidden;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.cuerpo h1 {
+    width: 100%;
+}
+
+.caja{
+    float: left;
+    width: 380px;
+    margin: 8px;
+    border: 1px solid;
+}
+.titulo{
+    text-align: center;
+    padding: 20px 0 15px 0;
+    color: #ff7600;
+    font-size: 35px;
+}
+.subtitulo{
+    background: #1551a1;
+}
+.servicio{
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+}
+.efecto:hover{
+    opacity: 0.8;
+    cursor: pointer;
+}
+.contenido{
+    padding: 20px;
+    text-align: justify;
+}
+.boton{
+    padding: 15px 20px;
+    margin: 20px 0;
+    color: white;
+    background: #134d99;
+}
+.boton:hover{
+    background: #113f7c;
+    cursor: pointer;
+}
+/*estilos del footer*/
+.pie{
+    background: #062348;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.izquierda {
+    float: left;
+    max-width: 550px;
+    padding: 20px;
+}
+.derecha{
+    float: right;
+    max-width: 550px;
+    padding: 20px;
+}
+.abajo{
+    color: white;
+    font-size: 11px;
+    text-align: justify;
+}
+.siguenos{
+    text-align: center;
+    color: white;
+    padding: 15px 0;
+}

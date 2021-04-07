@@ -1,0 +1,242 @@
+  Éste es el proyecto de una página web principal o home page desarrollada con html y css para una empresa de mecánica. Consiste de un encabezado con menú de navegación, un slider, tres articulos breves con enlaces a los mismos y un pie de página con información de la empresa asi como también de sus redes sociales.
+
+ESTRUCTURA:
+  La estructura de la página consta de cuatro elementos principales: encabezado, slider,
+cuerpo y pie de página; las mismas están contenidas dentro de una sección mas grande.
+
+>>>>>>>>Contenedor<<<<<<<<<<<<<
+> Encabezado.           
+> Slider.               
+> Cuerpo.               
+> Pie de página.        
+>>>>>>>>Fin del contenedor.<<<<
+
+DESARROLLO:
+  La estructura de la página está escrita en código HTML, mientras que el formato y
+estilos están escritos con código CSS. Voy a describir la manera en la que fui
+desarrollando la página:
+
+1) Código base y contenedor:
+  El código html comienza con un formato base de HTM5:
+
+<!DOCTYPE html>
+<html lang="es-ES">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Mecánica</title>
+</head>
+<body>
+   
+</body>
+</html>
+
+  Dentro de la etiqueta <body> abro la etiqueta <div> con la clase "container", éste es el contenedor para las secciones principales.
+
+<body>
+   <div class="container">
+       
+   </div>
+</body>
+
+  A la vez voy escribiendo los estilos para éstos elementos:
+> Para toda la pàgina: margin = 0; padding = 0
+> Para "body": background: #3a3d47; font-family: verdana;
+> Para la clase "container": max-width: 1200px; background: white; margin: 10px auto;
+
+2) Encabezado con logo, menú de navegación y slider:
+  Dentro del contenedor principal comienzo la primera sección de la página: el encabezado. Ésta sección está compuesta por el logo de la empresa y un menú de navegación con enlaces a otras páginas de la empresa: Inicio, Nosotros, Servicios, Noticias y Contacto. 
+Utilizo la etiqueta <header> para ésta sección y le doy la clase "superior". Dentro de ésta etiqueta coloco dos divisiones con las clases "logo" y "menu". El logo es una imagen diseñada la cual inserto dentro de su división con la etiqueta <img>. Por otra parte, el menú está conformado por una lista <ul> con la clase "opciones" y en cada item de la lista va uno de los cinco enlaces a las secciones de la empresa. Luego continuo con el slider, el mismo va dentro de una etiqueta <section> con la clase "slider" y cuenta con una imagen a la cual le especifico que ocupe el 100% del ancho del contenedor:
+
+<header class="superior">
+            <div class="logo">
+                <img src="imagenes/logo-blanco.png" alt="logo">
+            </div>
+            <div class="menu">
+                <ul class="opciones">
+                    <li><a href="#">INICIO</a></li>
+                    <li><a href="#">NOSOTROS</a></li>
+                    <li><a href="#">SERVICIOS</a></li>
+                    <li><a href="#">NOTICIAS</a></li>
+                    <li><a href="#">CONTACTO</a></li>
+                </ul>
+            </div>
+</header>
+<section class="slider">
+            <img src="imagenes/slider01.jpg" alt="slider" width="100%">
+</section>
+
+  El código css para el encabezado define el color de fondo, el tamaño del logo, la separación con los bordes de la sección y la manera en la que se posicionan los elementos. Tambièn define como se posicionan los botones del menú de navegación y el efecto de cambio de color de los mismos al posicionar el cursor sobre éstos:
+
+/* Formato de la sección */
+.superior {
+    background: #1551a1;
+    overflow: hidden;
+}
+
+/* Formato del logo */
+.logo {
+    float: left;
+    width: 300px;
+    padding: 35px;
+}
+
+/* Formato del menú */
+
+.menu {
+    float: left;
+    padding: 50px;
+}
+.opciones li{
+    float: left;
+    list-style: none;
+}
+.opciones li a{
+    color: white;
+    padding: 20px;
+    text-decoration: none;
+    border: 1px solid white;
+}
+.opciones li a:hover{
+    background: #0c3468;
+}
+
+
+3) Cuerpo:
+  El cuerpo de la página es la siguiente sección de la página por lo cual va dentro de una etiqueta <section> y lleva la clase "cuerpo". El cuerpo està conformado por el titulo de la pàgina y tres articulos cortos que describen de manera sintetica los servicios que da la empresa. 
+  El titulo de la página está dentro de una etiqueta <h1>, lleva la clase "titulo" y escrita la leyenda "Bienvenidos a tu mecánica de confianza".
+  Luego los artículos van dentro de etiquetas <article> y llevan la clase "caja". El titulo de esta clase es devido a que pienso cada artículo como una caja que contiene distintos elementos: la imagen del servicio, el titulo, la descripción y un boton de acceso. Cada uno de estos elementos cuenta con su propia clase para poder trabajar sus formatos:
+
+<section class="cuerpo">
+            <h1 class="titulo">
+                Bienvenidos a tu mecánica de confianza
+            </h1>
+            <article class="caja">
+            <div class="subtitulo">
+                <img src="imagenes/servicio01.jpg" alt="" class="efecto">
+                <h3 class="servicio">
+                    SERVICIO 01
+                </h3>
+            </div>
+            <div class="contenido">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta at et 		tempore nam suscipit sapiente magnam consequatur accusantium repellendus 		laborum esse, dolore perferendis repellat id velit. Natus facere 		consequuntur aperiam!</p>
+            </div>
+            <center>
+            <input type="submit" value="ACCEDER" class="boton"></center>
+            </article>
+            <article class="caja">
+            <div class="subtitulo">
+                <img src="imagenes/servicio02.jpg" alt="" class="efecto">
+                <h3 class="servicio">
+                    SERVICIO 02
+                </h3>
+            </div> 
+            <div class="contenido">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta at et 		tempore nam suscipit sapiente magnam consequatur accusantium repellendus 		laborum esse, dolore perferendis repellat id velit. Natus facere 		consequuntur aperiam!</p>
+            </div>
+            <center><input type="submit" value="ACCEDER" class="boton"></center>
+            </article>
+            <article class="caja">
+            <div class="subtitulo">
+                <img src="imagenes/servicio03.jpg" alt="" class="efecto">
+                <h3 class="servicio">
+                    SERVICIO 03
+                </h3>
+            </div>
+            <div class="contenido">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta at et 		tempore nam suscipit sapiente magnam consequatur accusantium repellendus 		laborum esse, dolore perferendis repellat id velit. Natus facere 		consequuntur aperiam!</p>
+            </div>
+            <center><input type="submit" value="ACCEDER" class="boton"></center>
+            </article>
+</section>
+
+  El código CSS para el cuerpo especifica la manera en que se disponen los articulos, sus tamaños y bordes, la fuente para cada parte específica, los colores de fondo, el formato de los botones y por ultimo, los efectos de cambio de color al pasar el cursor ensima de cada articulo y boton:
+
+.cuerpo{
+    overflow:hidden;
+}
+.caja{
+    float: left;
+    width: 380px;
+    margin: 8px;
+    border: 1px solid;
+}
+.titulo{
+    text-align: center;
+    padding: 20px 0 15px 0;
+    color: #ff7600;
+    font-size: 35px;
+}
+.subtitulo{
+    background: #1551a1;
+}
+.servicio{
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+}
+.efecto:hover{
+    opacity: 0.8;
+    cursor: pointer;
+}
+.contenido{
+    padding: 20px;
+    text-align: justify;
+}
+.boton{
+    padding: 15px 20px;
+    margin: 20px 0;
+    color: white;
+    background: #134d99;
+}
+.boton:hover{
+    background: #113f7c;
+    cursor: pointer;
+}
+
+4) Pie de página:
+  La ultima sección de la página es el pie de página, el cual brinda información sobre la empresa y sus redes sociales. Está dividida en dos partes "izquierda" y "derecha" dentro de la etiqueta <footer> con la clase "pie":
+
+<footer class="pie">
+            <div class="izquierda">
+                <center><img src="imagenes/logo-blanco.png" alt=""width="210px"></center>
+                <p class="abajo">Lorem ipsum dolor, sit amet consectetur adipisicing 				elit. Voluptatibus illum sunt non autem molestias inventore officia 		voluptas veniam sed quos repudiandae magnam error dolore odio, rerum 		voluptatum incidunt corporis dolores.</p>
+            </div>
+            <div class="derecha">
+                <p class="siguenos">Siguenos</p>
+                <center>
+                    <img src="imagenes/behance.png" alt="">
+                    <img src="imagenes/instagram.png" alt="">
+                    <img src="imagenes/twitter.png" alt="">
+                    <img src="imagenes/youtube.png" alt="">
+                </center>
+            </div>
+</footer>
+
+  Asi mismo el formato para el pie describe el color de fondo, la manera en la que se disponen las dos partes y las fuentes utilizadas en éstas:
+
+.pie{
+    background: #062348;
+    overflow: hidden;
+}
+.izquierda {
+    float: left;
+    width: 550px;
+    padding: 20px;
+}
+.derecha{
+    float: right;
+    width: 550px;
+    padding: 20px;
+}
+.abajo{
+    color: white;
+    font-size: 11px;
+    text-align: justify;
+}
+.siguenos{
+    text-align: center;
+    color: white;
+    padding: 15px 0;
+}
